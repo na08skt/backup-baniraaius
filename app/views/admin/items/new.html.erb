@@ -25,13 +25,14 @@
     <tr>
       <td><%=f.label :selling_status, "販売ステータス" %></td>
       <td>
-        <%= f.radio_button :selling_status, :"販売中", checked: true %>
+        <%= f.radio_button :selling_status, :true, checked: true %>
         <%= f.label :selling_status, "販売中" %>
       </td>
       <td>
-        <%= f.radio_button :selling_status, :"売切れ" %>
+        <%= f.radio_button :selling_status, :false %>
         <%= f.label :selling_status, "売切れ" %>
       </td>
+
     </tr>
     <tr>
       <td><%= f.submit "新規投稿" %></td>

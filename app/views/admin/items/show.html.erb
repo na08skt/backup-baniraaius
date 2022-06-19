@@ -19,6 +19,10 @@
       <td><%= @item.genre %></td>
     </tr>
     <tr>
+      <td>税込価格（税抜価格）</td>
+      <td><%= @item. %>(<%= @item.tax_off_price %>)</td>
+    </tr>
+    <tr>
       <td><p>販売ステータス</p></td>
       <td>
         <% if @item.selling_status == true %>
@@ -26,6 +30,11 @@
         <% else %>
           <p>売切れ</p>
         <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= link_to "編集する", edit_admin_item_path(@item) %>
       </td>
     </tr>
   </tbody>
